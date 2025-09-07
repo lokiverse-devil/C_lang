@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+ int arr[4];
+ int max=0;
+ printf("Enter array elements :\n");
+ for(int i=0;i<4;i++){
+     scanf("%d",&arr[i]);
+ }
+ //Code logic
+for(int i=0;i<4-1;i++){
+    for(int j=i+1;j<4;j++){
+        int sum=arr[i]+arr[j];
+        if(sum>max){
+            max=sum;
+        }
+    }
+}
+printf("The maximum sum is:%d",max);
+    return 0;
+}
+//What will the code output:
+//if array=[1,2,3,4];
+//sum of adjacent array={1+2=3} , {2+3=5} , {3+4=7}
+//maximum sum=7;
