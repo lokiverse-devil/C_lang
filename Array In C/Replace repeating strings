@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+ char str[50];
+
+ printf("Enter a string :\n");
+ scanf("%s",str);
+ int length=strlen(str);
+ //Code logic
+ for(int i=0;i<length-1;i++){
+    for(int j=i+1;j<length;j++){
+       if(str[i]==str[j]){
+           str[j]='*';
+       }
+    }
+
+ }
+    
+ printf("After removing the repeating strings = %s",str);
+    return 0;
+}
+//What will this do
+//Suppose the string is ="Programming"
+//replacing repeating strings with '*'
+//Output= prog*am*in*
