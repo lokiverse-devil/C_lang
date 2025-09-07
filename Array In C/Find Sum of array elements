@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+ int arr[4];
+ int sum=0;
+ printf("Enter array elements :\n");
+ for(int i=0;i<4;i++){
+     scanf("%d",&arr[i]);
+ }
+ //Code logic
+for(int i=0;i<4;i++){
+       sum=sum+arr[i];
+        }
+    
+printf("The sum is:%d",sum);
+    return 0;
+}
+//What will this do
+//Suppose array is=[1,2,3,4]
+//So the sum of array is[1+2+3+4]=10;
