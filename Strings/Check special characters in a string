@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char str[100];
+    int found = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str);   // reads full string including spaces
+
+    int length = strlen(str);
+
+    for(int i = 0; i < length; i++) {
+        if(!isalnum(str[i]) && str[i] != ' ') { 
+            found = 1;
+            break;
+        }
+    }
+
+    if(found)
+        printf("YES");
+    else
+        printf("NO");
+
+    return 0;
+}
+// string = "h@ll#&"
+// returns YES if special characters found
